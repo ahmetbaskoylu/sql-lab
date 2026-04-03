@@ -6,7 +6,7 @@
 - Detaylı loglama özelliklerini içerir.
 - Bunların hepsini tek bir dosya ile sağlar.
 
----
+
 
 ## 🚀 Özellikler
 
@@ -17,7 +17,6 @@
 - Tek log dosyası ve ayrı hata log dosyası tutar.
 - Görev Zamanlayıcısı ile kullanılabilir.
 
----
 
 ## ⚙️ Nasıl Çalışır?
 
@@ -31,25 +30,26 @@
 8. Geçici alınan yedek klasörünü temizler.  
 9. Yapılan bütün işlemlerin log kayıtlarını oluşturur.
 
----
 
 ## 📁 Yapılandırma
 
-Aşağıdaki değişkenleri düzenlemeniz yeterlidir:
+Sadece scriptte yer alan aşağıdaki değişkenleri düzenlemeniz yeterlidir:
 
 ```bat
-SOURCE=C:\path\to\data  
-BACKUPROOT=D:\backup  
 
-SQLSERVICE=MSSQL$INSTANCE  
-APPSERVICE1=Service1  
-APPSERVICE2=Service2  
+SQL_KLASORU_KAYNAK=C:\zirvenet\zirvedata
+YEDEK_KLASORU=E:\Zirve_Yedekleri
 
-NASSHARE=\\192.168.1.100\Backup  
-NASSUBFOLDER=Project  
-NASDRIVE=Z:  
-NASUSER=username  
-NASPASS=password  
+SQLSERVISI=MSSQL$ZRV2019EXP
+APPSERVISI1=srvczirvesunucu_srv_zirve_zrv2019exp
+APPSERVISI2=zirve_sunucusu
+
+NASPAYLASIM=\\10.10.10.11\Backup
+NASALTKLASOR=Zirve
+SURUCU=Z:
+KULLADI=backup
+KULLADI_PASS=12345678
+
 ```
 
 ---
@@ -60,20 +60,19 @@ Backup_YYYYMMDD_HHMM.zip
 BackupLog.txt  
 BackupLog_Error.txt  
 
----
 
 Task Scheduler ile çalıştırılmasını sağlayabilirsiniz.
 
 - Aktif olmayan bir saatte (gece vakti) çalıştırılması önerilir. 
 - Yüksek Ayrıcalıklarla çalışması gerekir.
+- System hesabı ile çalıştırın.
 
----
 
 ## ⚠️ Notlar
 
 - Script Administrator olarak çalıştırılmalıdır
-- Paylaşım alanına sadece zip dosyası kopyalanır.
-- Paylaşım bağlantısı Z sürücüsü olarak geçici olarak oluşturulur. Kopyalama bittiğinde bağlantıyı kapatır.
+- Paylaşım alanına yedeğin sadece zip dosyası kopyalanır.
+- Paylaşım bağlantısı Z sürücüsü olarak geçici olarak oluşturulur. Yedeğin kopyalaması bittiğinde bağlantıyı kapatır.
 - Robocopy dönüş kodları:
 - 0–7 → başarılı
 - 8+ → hata
@@ -98,7 +97,6 @@ dir Z:
 dir Z:\ProjectName
 net use Z: /delete /y
 ```
-
 
 ## ✍️ Geliştirici
 
