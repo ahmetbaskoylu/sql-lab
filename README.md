@@ -79,7 +79,7 @@ Task Scheduler ile çalıştırılmasını sağlayabilirsiniz.
 - 8+ → hata
 - SQL servisi durdurulamazsa yedekleme iptal edilir
 
-- 🛠️ Sorun Giderme
+## 🛠️ Sorun Giderme
 
 ❌ ZIP oluşmuyor
 - Disk dolu olabilir
