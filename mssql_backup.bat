@@ -7,6 +7,7 @@ REM AHMET BAŞKÖYLÜ - 2026
 REM MSSQL Backup Alma + ZIP Sıkıştırma + Paylaşım Z Sürücüsüne Kopyalama + Backup Log Tutma + Ayrı Error Log Tutma
 REM SADECE DEĞİŞKEN ARALIĞINI DEĞİŞTİRİN, DEĞİŞKEN ADINA VE DİĞER KODLARA DOKUNMAYIN.
 REM ÜCRETSİZ OLARAK DAĞITILMIŞTIR.
+REM https://github.com/ahmetbaskoylu/sql-lab
 REM ============================
 
 REM ----------------------------
