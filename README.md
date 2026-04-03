@@ -1,4 +1,4 @@
-# SQL Klasör Yedekleme Scripti
+# MSSQL Klasör Yedekleme Scripti
 
 - MSSQL tabanlı uygulamalar için servis kontrollü ve otomatik yedekleme işlemi yapar.
 - ZIP sıkıştırma işlemi yapar
